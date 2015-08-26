@@ -23,3 +23,6 @@ need to reboot
 
 #vi /etc/fstab
 /dev/xvda5   /data       ext4    defaults        0   0
+
+---reference commands
+fdisk -l /dev/sda
