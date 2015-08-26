@@ -1,0 +1,25 @@
+--steps to prepare the disks
+
+1. create extend & logic partion
+#fdisk /dev/xvda
+m, to show main menu
+p, to show partition
+n, to creat new partion
+w, to save & exit
+
+n 
+choose extend partion
+n
+choose logic partion
+
+need to reboot
+
+2. mkfs
+#mkfs -t ext4 /dev/xvda5
+
+3. mount disk
+#mkdir /data
+#mount /dev/xvda5 /data
+
+#vi /etc/fstab
+/dev/xvda5   /data       ext4    defaults        0   0
